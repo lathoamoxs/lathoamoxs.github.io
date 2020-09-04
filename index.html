@@ -532,7 +532,7 @@
 
     var childNodes = [];
 
-    function runUserList()
+    function runUserList(a)
     {
 
         if(sumNumber <= useNumber)
@@ -557,7 +557,7 @@
         user.at = hour+':'+(10 > min?('0'+min):min);
 
         var html = `
-        <div class="new-user" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
+        <div class="`+((2!=a)?'new-user':'')+`" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
                 <div style="position: absolute; left: 10px;right: 10px; display: flex;justify-content: space-between;">
                     <div style="display: flex; ">
                         <div style="display: flex;">
@@ -667,6 +667,12 @@
                 document.getElementById('step2FirstAlert').style.display = 'flex';
                 document.getElementById('step2Mask').style.display = 'block';
                 document.getElementById('maskBg').style.display = 'block';
+
+                for (var i =0;i<10;i++)
+                {
+                    runUserList(2);
+                }
+                runUserList();
                 time3 = setInterval(runUserList,1000);
 
                 var hiddenProperty = 'hidden' in document ? 'hidden' :
@@ -758,4 +764,4 @@
     }
     setStep(step);
 
-</script>< !--3T2DiE8QJ06OxyjEn0Bcm5dNR8B7ZXtnw9wz99Wk3qALDjV25jRCLUlMTTE4QGUamjqzEFQSoort70EYjzN7xcVWXOGjicvfbq8r8qPqXTU4THefK7UqTE29ERcbRB4813wdVtsbqXvCsV7uWs7A175mLjq4a447efst9aPJSbDUvxflkqmMF9hYvlINxvFD8cb3OMkWuTlaoevAuhjCZfIqyQR5MHeNRJ1ta0RgEDv1R4eW36L9L2eB96a3GIlLRc6Ic5cw2mrHDgldsZicOtY7S8p1VVbqmLek8rWACBfMPPyp8XSNOijoG3tcPHPqf3csMNMgmI5K7i7wtDA5Gvs1Z2xkoF2MGm0afpcaTYnMJKxeLvy8JSNMNffmZQJp5MT6Yyp7JBpa7xBGZjxuRauXZfpHCM5ystxVUJyqiFVT9P9DFmkEe0Mm8XDmD-->
+</script>< !--1lAIbNZF0d5cgbqpiV3ZnLz0PLugM1pHnFCc38TyxI861Qih5xUyPRo5ORc6dAhsbaCSwvQbPpI5UeTnhEbjawbijzb9Oz0hogNBqX4S6PZR50iT94GNRKt1x9W585QlG0OLbSABymdqoMJV84DSsCgbRHC3069i12DFfCJTjVB80c3jAoarK8CwzzPGZ3tPUw8ioqBi7DFOMhkE4iZyevcUjS96jE02o2Hy9VLP9uPApa1q6Gke2LOsb7OKZ6OxMZPmup7IpsBj4DSgt0d8tohwsJX4hmc3fY6BH9l1wGU0AKa5LWBWWf9jV3t11k2A4J8q7I3xWGElsfkSYvM6s9jBuhzDROqgIelmBlUSKTAczrpRI14cki7Gb0IE4iLeYU7gl-->
